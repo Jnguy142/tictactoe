@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Square from './Square/index.js';
+import styles from './styles.css';
 
 class Board extends Component {
     constructor(){
         super();
         this.state = {
-            player: 'X',
+            player: 1,
         }
     }
     generateBoard = (num) => {
@@ -24,14 +25,22 @@ class Board extends Component {
     }
 
     placePiece = (e) => {
-        e.target.innerHTML = 'O';
+        if(this.state.player === 1) {
+            e.target.innerHTML = 'O';
+            this.setState({ player: 2 });
+        } else {
+            e.target.innerHTML = 'X';
+            this.setState({ player: 1 });
+        }
     }
 
     render(){
         return(
         <div>
             <h1>PLAYER {this.state.player}</h1>
-            {this.generateBoard(9)}
+            <div className="board">
+                {this.generateBoard(9)}
+            </div>
         </div>);
     }
 }
