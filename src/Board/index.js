@@ -7,8 +7,13 @@ class Board extends Component {
     }
     generateBoard = (num) => {
         let board = [];
-        for(let i = 0; i < num; i++) {
-            board.push(<Square key = {i} />);
+        let rowsCols = Math.floor(Math.sqrt(num));
+        for(let i = 0; i < rowsCols; i++){
+            let row = [];
+            for(let j = 0; j < rowsCols; j++) {
+                row.push(<Square key = {j} />);
+            }
+            board.push(<div>{row}</div>);
         }
         return board;
     }

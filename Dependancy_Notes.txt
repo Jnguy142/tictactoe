@@ -1,1 +1,4 @@
 "plugins": ["transform-class-properties"] -> allows arrow functions within classes
+"html-webpack-plugin": "^2.30.1" -> allows for webpack to generate html file with inserted scripts
+"babel-core": "^6.26.0" "babel-loader": "^7.1.2" -> allows transpilation of es6 code
+webpack-dev-server": "^2.11.1" -> hot reloading
