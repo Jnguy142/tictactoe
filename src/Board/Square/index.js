@@ -3,7 +3,7 @@ import styles from './styles.css';
 
 let Square = (props) => {
     return(
-        <button className="square"></button>
+        <button className="square" onClick={props.clickHandler}></button>
     );
 }
 
