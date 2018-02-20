@@ -11,6 +11,10 @@ module.exports = {
           { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
         ]
     },
+        devServer: {
+        contentBase: './dist'
+    },
+    devtool: 'inline-source-map',
     plugins: [new HTMLwebpackPlugin({
         minify: {
             collapseWhitespace: true,

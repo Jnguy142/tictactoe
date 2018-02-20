@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Board from './Board/index.js';
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+    <div>
+        <Board/>
+    </div>,
   document.getElementById('root')
 );

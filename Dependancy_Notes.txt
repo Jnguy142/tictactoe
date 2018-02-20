@@ -1,0 +1,1 @@
+"plugins": ["transform-class-properties"] -> allows arrow functions within classes
